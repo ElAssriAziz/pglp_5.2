@@ -25,10 +25,10 @@ public class PersonnelDAO implements DAO<Personnel>,Serializable{
 		personnels.add(p);
 		
 	}
-	public Personnel find(Personnel t) {
+	public Personnel find(String p) {
 		
 		for (int i=0;i<personnels.size();i++)
-		if(t.equals(personnels.get(i)))
+		if(p.equals(personnels.get(i).getNom()))
 			return personnels.get(i);
 			
 		return null;

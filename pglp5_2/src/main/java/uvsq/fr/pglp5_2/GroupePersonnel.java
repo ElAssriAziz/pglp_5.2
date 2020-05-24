@@ -13,7 +13,7 @@ public class GroupePersonnel implements ComponentPersonnel,Serializable{
 	 */
 	private static final long serialVersionUID = -9104661272545130212L;
 	private final ArrayList<ComponentPersonnel> ListePersonnels;
-	
+	private String id;
 	public GroupePersonnel() {
 		ListePersonnels = new ArrayList<ComponentPersonnel>();
 	}
@@ -32,6 +32,9 @@ public class GroupePersonnel implements ComponentPersonnel,Serializable{
 
 	public int isGroup() {
 		return 1;
+	}
+	public String getID() {
+		return this.id;
 	}
 
 	

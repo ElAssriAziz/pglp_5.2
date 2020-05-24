@@ -20,9 +20,9 @@ public class GroupePersonnelDAO implements DAO<GroupePersonnel>,Serializable{
 		return groupes;
 	}
 
-	public GroupePersonnel find(GroupePersonnel GrpouePers) {
+	public GroupePersonnel find(String gp) {
 		for (int i=0;i<groupes.size();i++)
-			if(GrpouePers.equals(groupes.get(i)))
+			if(gp.equals(groupes.get(i).getID()))
 				return groupes.get(i);
 				
 			return null;
@@ -60,8 +60,8 @@ public class GroupePersonnelDAO implements DAO<GroupePersonnel>,Serializable{
 		
 	}
 
-	public void delete(GroupePersonnel t) {
-		groupes.remove(t);
+	public void delete(GroupePersonnel groupePers) {
+		groupes.remove(groupePers);
 		
 	}
 
