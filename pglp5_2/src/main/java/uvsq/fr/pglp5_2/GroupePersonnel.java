@@ -3,14 +3,8 @@ package uvsq.fr.pglp5_2;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-
 public class GroupePersonnel implements ComponentPersonnel,Serializable{
 	
-	
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -9104661272545130212L;
 	private final ArrayList<ComponentPersonnel> ListePersonnels;
 	private String id;
@@ -39,6 +33,13 @@ public class GroupePersonnel implements ComponentPersonnel,Serializable{
 	}
 	public void setID(String id) {
 		 this.id=id;
+	}
+	public String toString() {
+		String chaine="";
+		System.out.println("------------------- Groupe : "+this.getNom()+" -------------------");
+		for (ComponentPersonnel elem : this.ListePersonnels )
+			chaine+=elem.toString()+"\n";
+		return chaine;
 	}
 
 	

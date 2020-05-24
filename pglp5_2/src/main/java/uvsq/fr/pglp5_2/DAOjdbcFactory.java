@@ -1,14 +1,14 @@
 package uvsq.fr.pglp5_2;
 
-
-
-public class DAOjdbcFactory {
+public class DAOjdbcFactory extends AbstractDaoFactory {
 	
-	public static DAO<Personnel> getPersonnelDaoJDBC() {
-		return  new PersonnelDaoJDBC();
+	@Override
+	public DAO<Personnel> getPersonnelDAO() {
+		return  new PersonnelDaoJDBC();	
 	}
-	
-	public static DAO<GroupePersonnel> getGroupePersonnelDaoJDBC() {
+
+	@Override
+	public DAO<GroupePersonnel> getGroupePersonnelDAO() {
 		return new GroupePersonnelDaoJDBC(); 
 	}
 }

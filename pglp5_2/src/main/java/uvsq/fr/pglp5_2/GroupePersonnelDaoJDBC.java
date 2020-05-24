@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class GroupePersonnelDaoJDBC implements DAO<GroupePersonnel> {
 	public GroupePersonnel find(String t) {
 		 try {	
-			 GroupePersonnel  gr = new GroupePersonnel("");
+			 GroupePersonnel  gr = new GroupePersonnel(t);
 			 String sql1="SELECT * FROM Groupe WHERE id=?";
 				 PreparedStatement preparedStatement1 =
 					        connection.prepareStatement(sql1);
@@ -16,7 +16,7 @@ public class GroupePersonnelDaoJDBC implements DAO<GroupePersonnel> {
 				 if (result1.next()) {
 					 System.out.println("tttt");
 					gr = new GroupePersonnel(result1.getString(1));
-				 String sql2="SELECT * FROM Composer WHERE idGroupe=?;";
+				 String sql2="SELECT * FROM Composer WHERE idGroupe=?";
 				 PreparedStatement preparedStatement2 = connection.prepareStatement(sql2);
 				 preparedStatement2.setString(1,t);
 				 ResultSet result2 = preparedStatement2.executeQuery();
@@ -31,10 +31,10 @@ public class GroupePersonnelDaoJDBC implements DAO<GroupePersonnel> {
 					  if(result1.next()) {
 				
 						   Personnel personne = new Personnel
-					    			.Builder(result2.getString(1),result1.getString(2),result1.getString(3))
+					    			.Builder(result2.getString(2),result1.getString(2),result1.getString(3))
 					    			.build();
 						  gr.addPersonnel(personne);
-						  System.out.println("personnel "+personne.getNom()+" ajoute");
+						  System.out.println("personnel "+personne.getNom()+" ajoute"+result1.getString(3));
 					  }
 								  }
 		    	  System.out.println("Groupe "+gr.getNom()+" a été bien trouvé dans la base de données");

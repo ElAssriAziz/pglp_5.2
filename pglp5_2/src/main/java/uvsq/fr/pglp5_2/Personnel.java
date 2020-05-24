@@ -59,9 +59,6 @@ public final class Personnel implements Serializable,ComponentPersonnel{
 		public String getPrenom() {
 			return this.prenom;
 		}
-		/*
-		 * 
-		 */
 		public String getFonction() {
 			return this.fonction;
 		}
@@ -91,6 +88,6 @@ public final class Personnel implements Serializable,ComponentPersonnel{
 		 * Personnaliser l'affichage d'une personne
 		 */
 		public String toString() {
-			return nom + " " + prenom + " " + fonction + " " + dateNaissance + " " + numeros.toString();
+			return nom + " " + prenom + " " + fonction ;
 		}
 }
