@@ -6,4 +6,6 @@ public interface ComponentPersonnel extends Serializable{
 	
 public int isGroup();
 
+public String getNom();
+
 }

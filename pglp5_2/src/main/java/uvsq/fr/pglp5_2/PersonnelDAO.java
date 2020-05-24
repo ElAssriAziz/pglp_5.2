@@ -20,10 +20,10 @@ public class PersonnelDAO implements DAO<Personnel>,Serializable{
 	}
 
 	
-	public void create(Personnel p) {
+	public Personnel create(Personnel p) {
 	
 		personnels.add(p);
-		
+		return p;
 	}
 	public Personnel find(String p) {
 		

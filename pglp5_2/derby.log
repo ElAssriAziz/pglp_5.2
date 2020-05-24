@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun May 24 21:33:43 CEST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0172-482d-3ab4-0000058286a8 
+on database directory C:\Users\azize\Documents\Programmes Java\td2\pglp_5.2\pglp5_2\myDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc 
+Loaded from file:/C:/Users/azize/.m2/repository/org/apache/derby/derby/10.13.1.1/derby-10.13.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.2+9-LTS
+user.dir=C:\Users\azize\Documents\Programmes Java\td2\pglp_5.2\pglp5_2
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

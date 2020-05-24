@@ -22,17 +22,18 @@ public class GroupePersonnelDAO implements DAO<GroupePersonnel>,Serializable{
 
 	public GroupePersonnel find(String gp) {
 		for (int i=0;i<groupes.size();i++)
-			if(gp.equals(groupes.get(i).getID()))
+			if(gp.equals(groupes.get(i).getNom()))
 				return groupes.get(i);
 				
 			return null;
 	}
 
-	public void create(GroupePersonnel GrpouePers) {
+	public GroupePersonnel create(GroupePersonnel GrpouePers) {
 		
-		GroupePersonnel Gp =new GroupePersonnel();
+		GroupePersonnel Gp =new GroupePersonnel(GrpouePers.getNom());
 		Gp=GrpouePers;
 		groupes.add(Gp);
+		return Gp;
 	}
 
 	public GroupePersonnel update(GroupePersonnel groupePers) {

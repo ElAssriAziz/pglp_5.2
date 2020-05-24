@@ -7,7 +7,7 @@ import java.util.List;
  
 public final class Personnel implements Serializable,ComponentPersonnel{
 	
-
+ 
 		private static final long serialVersionUID = -5504351746862020764L;
 		private  String nom;
 		private  String prenom;
